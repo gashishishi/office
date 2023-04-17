@@ -1,0 +1,494 @@
+@charset 'utf-8';
+/* body *{
+    border:1px solid red;
+} */
+body{
+color:white;
+line-height: 1.5;
+}
+
+/* 変数 */
+:root{
+    --base-color: #212529;
+    --main-color: #2D4359;
+    --accent-color1:#70A7DF;
+    --accent-color2:#ADC3D9;
+    /*headerの高さは56px*/
+}
+
+
+
+.absolute-center{
+    
+    /* 上下左右中央寄せ */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.bg-main{
+    background-color: var(--main-color);
+}
+
+
+/* 半透明な黒いカバーを掛ける */
+.brightness-cover{
+    position: absolute;
+    filter: brightness(1.2);
+    opacity: 0.5;
+    width: 100%;
+
+    background-color: #333333;
+    
+    z-index: 5;
+}
+
+/****************/
+/* ノーマライズ */
+/****************/
+body{
+    background-color: var(--base-color);
+}
+body *,
+body *:before,
+body *::after{
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%; /* 元サイズより広げない*/
+    width: 100%; /* 親の幅に等倍 */
+    height: auto; /* スマホで縦横比を変えない */
+}
+
+div, header, article, section,
+footer, p, dl, figure, ul, ol
+{
+    box-sizing:border-box; /* paddingを内側に納める */
+}
+
+dl, figure, ul, ol{
+    padding-left: 0;
+}
+li{
+    list-style-type: none;
+    padding: 0;
+}
+.row > figure{
+    padding: 0;
+}
+/* 
+
+.article-advantage{
+    padding-bottom: 1rem;
+}
+.article-advantage p{
+    margin-top: 1rem;
+}
+.figure-side-text p:first-child{
+    padding-top: 1rem;
+}
+.article-advantage figure{
+    margin: 0 1rem 0.5rem 0
+}
+
+ */
+
+
+@media(min-width:576px){
+    .w-sm-50{
+        width: 50%;
+    }
+    .clear-both-sm{
+        clear: both;
+    }
+}
+
+@media(min-width:768px){
+    .clear-both-sm{
+        clear: none;
+    }
+    .clear-both-md{
+        clear: both;
+    }
+    .w-md-40{
+        width: 40%;
+    }
+}
+@media(min-width:992px){
+    .clear-both-md{
+        clear: none;
+    }
+    .clear-both-lg{
+        clear: both;
+    }
+    .w-lg-25{
+        width: 30%;
+    }
+}
+
+a{
+    text-decoration: none;
+ }
+
+section{
+    margin-top: 2rem;
+}
+/**************/
+/* ヘッダー部 */
+/**************/
+
+
+/*　ハンバーガーメニューボタン　*/
+
+/* アイコン部 */
+.hamburger {
+    display : block;
+    position: fixed; /* アイコンを固定 */
+    z-index : 30;
+    right : 20px;
+    top   : 10px;
+    width : 42px;
+    height: 42px;
+
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    color: white;
+    display : block;
+    position: absolute; /* アイコンエリア内の絶対位置で指定 */
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #BBBBBB;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  /* スマホメニューを開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    background :#fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 16px;
+    background :#fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  /* アイコン部ここまで */
+  
+  
+/* ナビ部 */
+/* メニュー背景　*/
+nav {
+    background-color: var(--base-color);
+    position: fixed;
+    z-index : 20;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background-color:var(--base-color);
+    text-align: center;
+    width: 100%;
+
+}
+  @media(max-width:575px){
+    /* クリックでjQueryで追加・削除 */
+    .nav-menu.active {
+        opacity: 100;
+        display: block;
+        transform: translateX(0%);
+        transition:all 0.6s;
+    }
+    .nav-menu{
+        transform: translateX(100%); /*画面右側に追い出す*/
+        transition: all 0.0s;
+    }
+    .title-logo{
+        display: inline-block;
+        position: fixed;
+        z-index: 30;
+        left: 20px;
+        top: 20px;
+    }
+
+  }
+  @media(min-width:576px){
+    .d-sm-flex{
+        display: flex;
+    }
+  }  
+.nav-menu {
+margin: 0 auto;
+padding: 0;
+width: 100%;
+}
+
+.nav-item {
+display: block;
+padding: 1em 0;
+text-decoration :none;
+cursor: pointer;
+}
+
+.nav-button{
+position: relative;
+display: block;
+overflow: hidden;
+width: 100%;
+height: 100%;
+border: 1px solid var(--base-color);
+}
+
+/*ボタン背景を変化させたときにテキストを隠さないように */
+.nav-button:before, .nav-button:after,
+.nav-button span:before,
+.nav-button span:after
+{
+  z-index: -1;
+}
+.nav-button {
+    color: #ffffff;
+}  
+/* ボタンのアニメーションはスマホサイズより大きい場合に限定する */
+@media(min-width:576px){
+/* ボタンの、変化するすべての要素にtransitionをつける。 */
+.nav-button:before, .nav-button:after,
+.nav-button span:before,
+.nav-button span:after,
+.nav-button:hover,
+.nav-button{
+  transition: 0.2s ease-in-out;
+}
+
+.nav-button:before, .nav-button:after,
+.nav-button span:before,
+.nav-button span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 25.25%;
+  height: 0;
+  background-color: #ffffff;
+}
+.nav-button:before {
+  left: 0;
+}
+.nav-button:after {
+  left: 50%;
+}
+.nav-button span:before, .nav-button span:after {
+  top: auto;
+  bottom: 0;
+}
+.nav-button span:before {
+  left: 25%;
+}
+.nav-button span:after {
+  left: 75%;
+}
+
+/* btnテキストカラー */
+.nav-button {
+    color: #ffffff;
+}  
+.nav-button:hover {
+  color: var(--base-color);
+}
+.nav-button:hover:before, .nav-button:hover:after,
+.nav-button:hover span:before,
+.nav-button:hover span:after {
+  height: 100%;
+}
+}
+/**************/
+/* ヒーロー部 */
+/**************/
+.hero{
+    position: relative;
+}
+
+/* タイトルのフェードイン */
+/* jQueryでアニメーション */
+.fade-title{
+    opacity : 0;
+}
+.fade-text{
+    opacity : 0;
+}
+
+
+.hero-bg-img{
+    background-image: url(images/desk01.png);
+    height: 600px;    
+    width: 100%;
+    background-position: left 56px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -10;
+    
+    background-color: rgba(45,67,89,0.7);
+
+    /* filter:blur(3px); */ /* ぼかし */
+    filter: brightness(0.7);
+}
+
+.hero-text{
+    position: absolute;
+}
+/***********/
+/* work部 */
+/***********/
+#work{
+    position: relative;
+}
+/* 背景画像 */
+.bg-img-work{
+    background-image: url(images/meeting03.png);
+    width: 100%;
+    background-position: 70% 56px;
+    background-attachment: fixed;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -10;
+
+    /* filter:blur(3px); */ /* ぼかし */
+    /* filter: brightness(0.7); */
+}
+@media(min-width:576px){
+    .bg-img-work{
+        background-position: right 56px;
+    }
+}
+/* 
+#work article {
+    position: absolute;
+    z-index: 10;
+} */
+
+.bg-opacity-50{
+    background-color: rgba(45,67,89,0.7);
+}
+.text-shadow{
+    text-shadow: 3px 3px 5px var(--base-color);
+}
+
+
+/***************/
+/* advantage部 */
+/***************/
+.figure-side-text p{
+    margin: 1.5rem;
+}
+
+
+
+
+/**********************************/
+/* slick スライダーの設定(jQuery) */
+/**********************************/
+/* slickは読み込みが完了すると「slick-initialized」というクラスをつける */
+.slider{
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0;
+}
+
+
+.slider div {
+    max-height: 400px;
+    margin-left: 1rem;
+}
+@media(max-width:575px){
+    .slider div {
+        margin-left:0;
+    }
+}
+
+/*slick 左右の矢印の設定 */
+.slick-prev:before,
+.slick-next:before {
+    color: #fff;
+
+}
+
+/* 矢印を内側に入れる */
+.slick-prev.slick-arrow,
+.slick-prev.slick-arrow:before
+{
+    position: absolute;
+    left: 0;
+    z-index: 10;
+
+}
+.slick-next.slick-arrow,
+.slick-next.slick-arrow:before
+{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+}
+
+/* よくわからない余白を打ち消す */
+/* .slick-track {
+    display: flex;
+    }
+    .slick-slide {
+    height: auto !important;
+    } */
+
+/* 読み込んでから表示するためにアニメーションさせる */
+/* .slider{
+    opacity: 0;
+    transition: 2s;
+}
+.slick-initialized{
+    opacity: 1
+} */
+
+/************/
+/* フッター */
+/************/
+.footer{
+    background-color: var(--main-color);
+    padding: 0;
+}
+.footer-title-wrapper{
+    position: relative;
+    
+    background-color: var(--base-color);
+    height: 150px;
+}
+.footer-title{
+    display: block;
+    position: absolute;
+}
+
+
+
