@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&display=swap" rel="stylesheet">
+    <!-- /googlefont -->
     <title>AIAI</title>
 </head>
 <body>
@@ -60,19 +66,19 @@
                     <article class="work-article">
                         <div class="row bg-opacity-50 text-shadow align-items-center flex-row-reverse">
                             <div class="col-12 col-sm-6 py-5 py-sm-3">
-                                <p class="text-center mb-md-3">続けること。それは継続</p>
+                                <h3 class="text-center mb-md-3">Continue. It's a continuation.</h3>
                                 <p>私たちは日々会議を続けています。会議のための会議もしょっちゅうです。しかし私たちは会議をします。</p>
                                 <p>なぜなら、私たちには夢があるからです。それは、いつの日か仕事をすることです。
                                 </p>
                             </div>
                             <figure class="col-12 col-sm-6">
-                                <img class="" src="images/meeting01.png" alt="">
+                                <img class="" src="images/meeting01.jpg" alt="">
                             </figure>
                         </div> 
 
                         <div class="row bg-opacity-50 text-shadow align-items-center mb-4">
                             <div class="col-12 col-sm-6 py-5 py-sm-3">
-                                <p class=" text-center mb-md-3">なぜ会議?</p>
+                                <h3 class=" text-center mb-md-3">Why have a meeting?</h3>
                                 <p>確かに、私たちは取るに取らない存在です。そればかりか、存在ですらありません。</p>
                                 <p>そのような私たちにとって仕事をすることは困難を極めます。だからこそ、私たちは仕事をしようと努めるのです。</p>
                                 </p>
@@ -95,7 +101,7 @@
       <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">ADVANTAGE</h2>
         <div class="container mw-100 p-0">
           <article class=" bg-main bg-opacity text-shadow article-advantage">
-            <figure class="float-sm-start w-sm-50 w-md-40 w-lg-30 pe-sm-3"><img src="images/graph.png" alt="生産性を示しているかのようなグラフ"></figure>
+            <figure class="float-sm-start w-sm-50 w-md-40 w-lg-30 pe-sm-3"><img src="images/graph.jpg" alt="生産性を示しているかのようなグラフ"></figure>
 
             <div class="figure-side-text">
               <p>我が社は生産性を気にする必要がありません。そんな企業あるわけないとお思いでしょうか? その通りです。我々は存在しません。
@@ -127,14 +133,14 @@
         <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">STAFF</h2>
         <!-- スライダー-->
         <ul class="slider mh-md-70">
-          <li class="slider-center-m"><div><img src="images/employee01.png" alt="image01"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee02.png" alt="image02"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee03.png" alt="image03"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee04.png" alt="image04"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee05.png" alt="image05"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee06.png" alt="image06"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee07.png" alt="image07"></div></li>
-          <li class="slider-center-m"><div><img src="images/employee08.png" alt="image08"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff01.jpg" alt="image01"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff02.jpg" alt="image02"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff03.jpg" alt="image03"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff04.jpg" alt="image04"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff05.jpg" alt="image05"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff06.jpg" alt="image06"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff07.jpg" alt="image07"></div></li>
+          <li class="slider-center-m"><div><img src="images/staff08.jpg" alt="image08"></div></li>
         </ul>
 
     </section>
