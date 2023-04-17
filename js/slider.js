@@ -1,7 +1,7 @@
 jQuery(function($){
     $('.slider').slick({
         arrows: true,
-        // autoplay:true,
+        autoplay:true,
         autoplaySpeed:5000,
         //一番大きいサイズ用設定
         centerMode:true,

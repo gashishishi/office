@@ -7,6 +7,13 @@ color:white;
 line-height: 1.5;
 }
 
+.fade-text, h2, h3{
+    font-family: 'Bebas Neue', cursive;
+}
+.fade-title, .title-logo, footer-logo, nav{
+    font-family: 'Orbitron', sans-serif;
+}
+
 /* 変数 */
 :root{
     --base-color: #212529;
