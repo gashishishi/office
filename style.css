@@ -48,18 +48,6 @@ line-height: 1.5;
 }
 
 
-/* 半透明な黒いカバーを掛ける */
-.brightness-cover{
-    position: absolute;
-    filter: brightness(1.2);
-    opacity: 0.5;
-    width: 100%;
-
-    background-color: #333333;
-    
-    z-index: 5;
-}
-
 /****************/
 /* ノーマライズ */
 /****************/
