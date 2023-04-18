@@ -3,6 +3,7 @@ jQuery(function($){
         arrows: true,
         autoplay:true,
         autoplaySpeed:5000,
+        dots:true,
         //一番大きいサイズ用設定
         centerMode:true,
         slidesToShow:3,

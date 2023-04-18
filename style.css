@@ -461,7 +461,6 @@ border: 1px solid var(--base-color);
 .slick-prev:before,
 .slick-next:before {
     color: #fff;
-
 }
 
 /* 矢印を内側に入れる */
@@ -479,7 +478,16 @@ border: 1px solid var(--base-color);
     position: absolute;
     right: 0;
     z-index: 10;
+}
 
+/* 通常時のドットの色*/
+.slick-dots li button:before {
+	color: #ffffff ;
+}
+
+/*アクティブなスライドのドット色*/
+.slick-dots li.slick-active button:before {
+	color: #ffffff;
 }
 
 /* よくわからない余白を打ち消す */
