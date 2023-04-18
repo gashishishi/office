@@ -361,6 +361,7 @@ border: 1px solid var(--base-color);
 
 }
 .hero-bg-img.section-inner::before{
+    display: block;
     top: 56px;
     left: 0;
     width: 100%;
@@ -371,6 +372,7 @@ border: 1px solid var(--base-color);
     filter: brightness(0.7);
 }
 .work-bg-img.section-inner::before{
+    display: block;
     top: 56px;
     left: 0;
     width: 100%;
