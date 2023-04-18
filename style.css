@@ -22,9 +22,14 @@ line-height: 1.5;
     --accent-color2:#ADC3D9;
     /*headerの高さは56px*/
 }
-
-
-
+.bt-center{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
 .absolute-center{
     
     /* 上下左右中央寄せ */
@@ -141,7 +146,7 @@ a{
  }
 
 section{
-    margin-top: 2rem;
+    padding-top: 2rem;
 }
 /**************/
 /* ヘッダー部 */
@@ -332,9 +337,6 @@ border: 1px solid var(--base-color);
 /**************/
 /* ヒーロー部 */
 /**************/
-.hero{
-    position: relative;
-}
 
 /* タイトルのフェードイン */
 /* jQueryでアニメーション */
@@ -345,14 +347,33 @@ border: 1px solid var(--base-color);
     opacity : 0;
 }
 
+/*position:fixed*/
+.hero{
+    position: relative;
+    width: 100vw;
+    height: 600px;
+}
+.work{
+    position: relative;
+    width: 100vw;
+    height: 600px;
+}
 
-.hero-bg-img{
-    background-image: url(images/desk01.png);
-    height: 600px;    
+.section-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-position: left 56px;
+    height: 100%;
+    clip: rect(auto, auto, auto, auto);
+}
+
+.hero-bg-img,.work-bg-img{
+    position: fixed;
+    display: block;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
+
     background-repeat: no-repeat;
     z-index: -10;
     
@@ -360,7 +381,27 @@ border: 1px solid var(--base-color);
 
     /* filter:blur(3px); */ /* ぼかし */
     filter: brightness(0.7);
+
 }
+.hero-bg-img{
+    top: 56px;
+    left: 0;
+    height: 600px;    
+    width: 100%;
+}
+.work-bg-img{
+    top: 56px;
+    left: 0;
+    height: 600px;    
+    width: 100%;
+
+}
+/* @media(min-width:576px){
+    .work-bg-img{
+        top: 56px;
+        right: 30%;
+    } 
+}*/
 
 .hero-text{
     position: absolute;
@@ -368,28 +409,9 @@ border: 1px solid var(--base-color);
 /***********/
 /* work部 */
 /***********/
-#work{
-    position: relative;
-}
+
 /* 背景画像 */
-.bg-img-work{
-    background-image: url(images/meeting03.png);
-    width: 100%;
-    background-position: 70% 56px;
-    background-attachment: fixed;
 
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -10;
-
-    /* filter:blur(3px); */ /* ぼかし */
-    /* filter: brightness(0.7); */
-}
-@media(min-width:576px){
-    .bg-img-work{
-        background-position: right 56px;
-    }
-}
 /* 
 #work article {
     position: absolute;
@@ -407,8 +429,11 @@ border: 1px solid var(--base-color);
 /***************/
 /* advantage部 */
 /***************/
-.figure-side-text p{
+.figure-side-text p:not(:last-child){
     margin: 1.5rem;
+}
+.figure-side-text p:last-child{
+    margin: 1.5rem 1.5rem 0 1.5rem;
 }
 
 

@@ -45,9 +45,13 @@
 
     </header>
 
-    <section class="hero" id="hero">
-        <div class="hero-bg-img">
-        </div>
+    <section class="hero section" id="hero">
+    <div class="section-inner">
+        <div
+          class="hero-bg-img"
+          style="background-image: url(images/desk01.png)"
+        ></div>
+        
         <div class="hero-text text-white text-shadow m-auto d-block w-50 text-center absolute-center">
             <h1 class="fade-title">AIAI Company</h1>
             <div class="fade-text">
@@ -56,48 +60,51 @@
                 それは人工知能
             </div>
         </div>
-
+        
+    </div>
     </section>
 
-<section class="work" id="work">
-    <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">WORK</h2>
-    <div class="bg-img-work">
-                <div class="container mw-100">
-                    <article class="work-article">
-                        <div class="row bg-opacity-50 text-shadow align-items-center flex-row-reverse">
-                            <div class="col-12 col-sm-6 py-5 py-sm-3">
-                                <h3 class="text-center mb-md-3">Continue. It's a continuation.</h3>
-                                <p>私たちは日々会議を続けています。会議のための会議もしょっちゅうです。しかし私たちは会議をします。</p>
-                                <p>なぜなら、私たちには夢があるからです。それは、いつの日か仕事をすることです。
-                                </p>
-                            </div>
-                            <figure class="col-12 col-sm-6">
-                                <img class="" src="images/meeting01.jpg" alt="">
-                            </figure>
-                        </div> 
+    <div class="py-5 bg-base"><h2 class="d-block m-auto w-50 text-center bg-danger">WORK</h2></div>
 
-                        <div class="row bg-opacity-50 text-shadow align-items-center mb-4">
-                            <div class="col-12 col-sm-6 py-5 py-sm-3">
-                                <h3 class=" text-center mb-md-3">Why have a meeting?</h3>
-                                <p>確かに、私たちは取るに取らない存在です。そればかりか、存在ですらありません。</p>
-                                <p>そのような私たちにとって仕事をすることは困難を極めます。だからこそ、私たちは仕事をしようと努めるのです。</p>
-                                </p>
-                            </div>
-                            <figure class="col-12 col-sm-6">
-                                <img class="" src="images/meeting04.png" alt="">
-                            </figure>
+<section class="work section" id="work">
+    <div class="section-inner">
+            <div
+                class="work-bg-img"
+                style="background-image: url(images/meeting03.png)"
+            ></div>
+            <div class="container mw-100">
+                <article class="work-article bt-center">
+                    <div class="row bg-opacity-50 text-shadow align-items-center flex-row-reverse">
+                        <div class="col-12 col-sm-6 py-5 py-sm-3">
+                            <h3 class="text-center mb-md-3">Continue. It's a continuation.</h3>
+                            <p>私たちは日々会議を続けています。会議のための会議もしょっちゅうです。しかし私たちは会議をします。</p>
+                            <p>なぜなら、私たちには夢があるからです。それは、いつの日か仕事をすることです。
+                            </p>
                         </div>
-                    </article>
+                        <figure class="col-12 col-sm-6">
+                            <img class="" src="images/meeting01.jpg" alt="">
+                        </figure>
+                    </div> 
 
+                    <div class="row bg-opacity-50 text-shadow align-items-center mb-4">
+                        <div class="col-12 col-sm-6 py-5 py-sm-3">
+                            <h3 class=" text-center mb-md-3">Why have a meeting?</h3>
+                            <p>確かに、私たちは取るに取らない存在です。そればかりか、存在ですらありません。</p>
+                            <p>そのような私たちにとって仕事をすることは困難を極めます。だからこそ、私たちは仕事をしようと努めるのです。</p>
+                            </p>
+                        </div>
+                        <figure class="col-12 col-sm-6">
+                            <img class="" src="images/meeting04.png" alt="">
+                        </figure>
+                    </div>
+                </article>
             </div>
+
     </div>
-
-
-
 
 </section>
 
-    <section class="advantage" id="advantage">
+    <section class="advantage bg-base" id="advantage">
       <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">ADVANTAGE</h2>
         <div class="container mw-100 p-0">
           <article class=" bg-main bg-opacity text-shadow article-advantage">
@@ -129,8 +136,8 @@
         </div>
     </section>
 
-    <section class="staff" id="staff">
-        <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">STAFF</h2>
+    <section class="staff bg-base" id="staff">
+        <h2 class="d-block m-auto my-5 w-50 text-center bg-danger">STAFF</h2>
         <!-- スライダー-->
         <ul class="slider mh-md-70">
           <li class="slider-center-m"><div><img src="images/staff01.jpg" alt="image01"></div></li>
@@ -147,7 +154,7 @@
 
 
     
-    <footer class="footer " id="footer">
+    <footer class="footer" id="footer">
         <section class="access" id="access">
         <h2 class="d-block m-auto w-50 text-center mb-5 bg-danger">ACCESS</h2>
         <div class="container">
@@ -180,4 +187,22 @@
 <script src="js/scroll.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/fade-text.js"></script>
+<script>
+
+    jQuery(function($){
+        /** 背景画像のために、workのheightをwork-articleに合わせる */
+        function setWorkHeight(){
+            let rem = 16;
+            let articleHeight = $('.work-article').height();
+            $(".work").css("height", articleHeight + 5*rem);
+        }
+        setWorkHeight();
+
+        $(window).resize(function(){
+        setWorkHeight();
+      });
+    });
+
+
+</script>
 </html>

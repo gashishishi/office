@@ -1,11 +1,8 @@
 jQuery(function($){
     function getScrollHeight(){
         //navバーの高さ
-        let navHeight = document.getElementById('nav').clientHeight;
-        return navHeight;
+        return $('nav').height();
     }
-
-    let navHeight = getScrollHeight();
 
     $(window).resize(function(){
         navHeight = getScrollHeight();
