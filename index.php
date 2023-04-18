@@ -64,8 +64,7 @@
     </div>
     </section>
 
-    <div class="py-5 bg-base"><h2 class="d-block m-auto w-50 text-center bg-danger">WORK</h2></div>
-
+<div class="my-5 bg-base"><h2 class="d-block m-auto w-50 text-center bg-danger" id="work-title">WORK</h2></div>
 <section class="work section" id="work">
     <div class="section-inner">
             <div

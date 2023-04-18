@@ -4,6 +4,8 @@ jQuery(function($){
         return $('nav').height();
     }
 
+    let navHeight = getScrollHeight();
+
     $(window).resize(function(){
         navHeight = getScrollHeight();
       });
@@ -13,19 +15,19 @@ jQuery(function($){
         $('html').animate({scrollTop:heroTop},{ duration: 1, easing: 'linear' });
     });
 
-    $('#scroll-staff').on('click',function(){
-        let staffTop = $('#staff').offset().top - navHeight;
-        $('html').animate({scrollTop:staffTop},{ duration: 1, easing: 'linear' });
-    });
-
     $('#scroll-work').on('click',function(){
-        let workTop = $('#work').offset().top - navHeight;
+        let workTop = $('#work-title').offset().top - navHeight;
         $('html').animate({scrollTop:workTop},{ duration: 1, easing: 'linear' });
     });
 
     $('#scroll-advantage').on('click',function(){
         let advantageTop = $('#advantage').offset().top - navHeight;
         $('html').animate({scrollTop:advantageTop},{ duration: 1, easing: 'linear' });
+    });
+
+    $('#scroll-staff').on('click',function(){
+        let staffTop = $('#staff').offset().top - navHeight;
+        $('html').animate({scrollTop:staffTop},{ duration: 1, easing: 'linear' });
     });
 
     $('#scroll-footer').on('click',function(){
