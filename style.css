@@ -6,7 +6,9 @@ body{
 color:white;
 line-height: 1.5;
 }
-
+.row{
+    max-width: 100%;
+}
 .fade-text, h2, h3{
     font-family: 'Bebas Neue', cursive;
 }
@@ -348,14 +350,9 @@ border: 1px solid var(--base-color);
 }
 
 /*position:fixed*/
-.hero{
+.hero,.work{
     position: relative;
-    width: 100vw;
-    height: 600px;
-}
-.work{
-    position: relative;
-    width: 100vw;
+    width: 100%;
     height: 600px;
 }
 
