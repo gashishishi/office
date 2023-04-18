@@ -46,7 +46,8 @@
     </header>
 
     <section class="hero section" id="hero">
-    <div class="hero-bg-img section-inner">
+    <div class="hero-bg-img section-inner">       
+    </div>
         
         <div class="hero-text text-white text-shadow m-auto d-block w-50 text-center absolute-center">
             <h1 class="fade-title">AIAI Company</h1>
@@ -56,13 +57,13 @@
                 それは人工知能
             </div>
         </div>
-        
-    </div>
+ 
     </section>
 
 <div class="my-5 bg-base"><h2 class="d-block m-auto w-50 text-center bg-danger" id="work-title">WORK</h2></div>
 <section class="work section" id="work">
     <div class="work-bg-img section-inner">
+    </div>
             
             <div class="container mw-100">
                 <article class="work-article bt-center">
@@ -92,7 +93,6 @@
                 </article>
             </div>
 
-    </div>
 
 </section>
 
