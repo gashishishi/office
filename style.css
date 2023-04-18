@@ -383,6 +383,8 @@ border: 1px solid var(--base-color);
     filter: brightness(0.7);
 }
 
+/* imgタグで背景つけてposition fixedで固定してみる */
+
 @media(max-width:575px){
     .work-bg-img.section-inner::before{
     
