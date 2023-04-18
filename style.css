@@ -342,49 +342,51 @@ border: 1px solid var(--base-color);
     height: 600px;
 }
 
+.section{
+    position: relative;
+    overflow: hidden;
+}
 .section-inner{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    clip: rect(auto, auto, auto, auto);
+    clip: rect(0, auto, auto, 0);
+    z-index: -1;
 }
-
-.hero-bg-img,.work-bg-img{
+.section-inner::before{
+    content: '';
     position: fixed;
-    display: block;
+
+}
+.hero-bg-img.section-inner::before{
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background: url(images/desk01.png) center/* / cover no-repeat */;
     background-size: cover;
     background-position: center;
-
-    background-repeat: no-repeat;
-    z-index: -10;
-    
-    background-color: rgba(45,67,89,0.7);
-
-    /* filter:blur(3px); */ /* ぼかし */
     filter: brightness(0.7);
-
 }
-.hero-bg-img{
+.work-bg-img.section-inner::before{
     top: 56px;
     left: 0;
-    height: 600px;    
     width: 100%;
+    height: 600px;
+    background: url(images/meeting03.png) center/* / cover no-repeat */;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
 }
-.work-bg-img{
-    top: 56px;
-    left: 0;
-    height: 600px;    
-    width: 100%;
 
-}
-/* @media(min-width:576px){
-    .work-bg-img{
-        top: 56px;
-        right: 30%;
+@media(max-width:575px){
+    .work-bg-img.section-inner::before{
+    
+        background-position: right 30% ;
     } 
-}*/
+}
 
 .hero-text{
     position: absolute;
