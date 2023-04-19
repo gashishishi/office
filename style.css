@@ -351,6 +351,7 @@ ul {
     top: 56px;
     background-position: center;
     z-index: -10;
+    width: 100%;
     height: 600px;
 }
 .work-fixed.active{
@@ -358,6 +359,7 @@ ul {
     top: 56px;
     background-position: center;
     z-index: -10;
+    width: 100%;
     height: 600px;
 }
 .hero-fixed img{
@@ -398,14 +400,6 @@ ul {
 /* work部 */
 /***********/
 
-/* 背景画像 */
-
-/* 
-#work article {
-    position: absolute;
-    z-index: 10;
-} */
-
 .bg-opacity-50{
     background-color: rgba(45,67,89,0.7);
 }
@@ -438,7 +432,6 @@ ul {
     position: relative;
     padding: 0;
 }
-
 
 .slider div {
     max-height: 400px;
@@ -481,6 +474,10 @@ ul {
 /*アクティブなスライドのドット色*/
 .slick-dots li.slick-active button:before {
 	color: #ffffff;
+}
+.slick-dotted.slick-slider {
+    padding-bottom: 30px ;
+    margin-bottom: 0;
 }
 
 /* よくわからない余白を打ち消す */

@@ -106,11 +106,12 @@
         </div>
 
     </div><!-- work -->
-        
-        
+</section>  
 
-    <div class="advantage bg-base" id="advantage">
-    <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">ADVANTAGE</h2>
+    <section class="advantage bg-base" id="advantage">
+    <div class="py-5 bg-base">
+        <h2 class="d-block m-auto w-50 text-center bg-danger">ADVANTAGE</h2>
+    </div>
         <div class="container mw-100 p-0">
         <article class=" bg-main bg-opacity text-shadow article-advantage">
             <figure class="float-sm-start w-sm-50 w-md-40 w-lg-30 pe-sm-3"><img src="images/graph.jpg" alt="生産性を示しているかのようなグラフ"></figure>
@@ -139,10 +140,12 @@
 
         </article>
         </div>
-    </div><!-- advantage -->
 </section>
+
     <section class="staff bg-base" id="staff">
-        <h2 class="d-block m-auto my-5 w-50 text-center bg-danger">STAFF</h2>
+    <div class="py-5 bg-base">
+        <h2 class="d-block m-auto w-50 text-center bg-danger">STAFF</h2>
+    </div>
         <!-- スライダー-->
         <ul class="slider mh-md-70">
           <li class="slider-center-m"><div><img src="images/staff01.jpg" alt="image01"></div></li>
@@ -161,7 +164,9 @@
     
     <footer class="footer" id="footer">
         <section class="access" id="access">
-        <h2 class="d-block m-auto w-50 text-center mb-5 bg-danger">ACCESS</h2>
+        <div class="py-5 bg-main">
+            <h2 class="d-block m-auto w-50 text-center bg-danger">ACCESS</h2>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 text-md-center">
