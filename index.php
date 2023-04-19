@@ -49,6 +49,7 @@
         <div class="hero-fixed">
             <figure class="hero-bg-img">
                 <img src="images/desk01.png" alt="">      
+                <img class="meeting d-none" src="images/meeting03.png" alt="">      
             </figure>
        </div> 
         <div class="hero-text text-white text-shadow m-auto d-block w-50 text-center absolute-center">
@@ -207,29 +208,34 @@
         var workBottom = $('.work').offset().top + $('.work').outerHeight();;
         $(window).on('scroll', function(){
             scroll = $(window).scrollTop();
+            const heroImg = $('.hero-bg-img img');
+            const workImg = $('.work-bg-img');
         // work-fixedがnavの位置まで来たら固定する
         if(scroll >= workImgTop - fixedHeight){
             console.log(scroll);
-            if(!$('.work-fixed').hasClass('active')){
-                $('.work-fixed').addClass('active')
+            if( !workImg.hasClass('d-none') ){
+                workImg.addClass('d-none');
+                heroImg.eq(0).addClass('d-none');
+                heroImg.eq(1).removeClass('d-none');
             }
         } else {
-            if($('.work-fixed').addClass('active')){
-                $('.work-fixed').removeClass('active')
+            if(workImg.hasClass('d-none')){
+                workImg.removeClass('d-none');
+                heroImg.eq(0).removeClass('d-none');
+                heroImg.eq(1).addClass('d-none');
             }
         }
 
         // workを通り過ぎたら hero-bg-img,work-bg-imgをd-noneにする。
-        const heroImg = $('.hero-bg-img');
-        const workImg = $('.work-bg-img');
+
         if(scroll >= workBottom){
-            if (!heroImg.hasClass('d-none'))
-                heroImg.addClass('d-none');
-                workImg.addClass('d-none');
-        } else {
-            if (heroImg.hasClass('d-none'))
-                heroImg.removeClass('d-none');
+            if (!heroImg.eq(1).hasClass('d-none')){
+                heroImg.eq(1).addClass('d-none');
                 workImg.removeClass('d-none');
+            }
+        } else {
+            if (heroImg.eq(1).hasClass('d-none'))
+                heroImg.eq(0).removeClass('d-none');
         }
         });
     });
