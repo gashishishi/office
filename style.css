@@ -477,7 +477,7 @@ ul {
 }
 .slick-dotted.slick-slider {
     padding-bottom: 30px ;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 /* よくわからない余白を打ち消す */
