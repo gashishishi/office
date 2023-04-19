@@ -45,10 +45,12 @@
 
     </header>
 
-    <section class="hero section" id="hero">
-    <div class="hero-bg-img section-inner">       
-    </div>
-        
+    <section class="hero" id="hero">
+        <div class="hero-fixed">
+            <figure class="hero-bg-img">
+                <img src="images/desk01.png" alt="">      
+            </figure>
+       </div> 
         <div class="hero-text text-white text-shadow m-auto d-block w-50 text-center absolute-center">
             <h1 class="fade-title">AIAI Company</h1>
             <div class="fade-text">
@@ -60,74 +62,85 @@
  
     </section>
 
-<div class="my-5 bg-base"><h2 class="d-block m-auto w-50 text-center bg-danger" id="work-title">WORK</h2></div>
-<section class="work section" id="work">
-    <div class="work-bg-img section-inner">
+
+
+<section>
+    <div class="py-5 bg-base">
+        <h2 class="d-block m-auto w-50 text-center bg-danger" id="work-title">WORK</h2>
     </div>
-            
-            <div class="container mw-100">
-                <article class="work-article bt-center">
-                    <div class="row bg-opacity-50 text-shadow align-items-center flex-row-reverse">
-                        <div class="col-12 col-sm-6 py-5 py-sm-3">
-                            <h3 class="text-center mb-md-3">Continue. It's a continuation.</h3>
-                            <p>私たちは日々会議を続けています。会議のための会議もしょっちゅうです。しかし私たちは会議をします。</p>
-                            <p>なぜなら、私たちには夢があるからです。それは、いつの日か仕事をすることです。
-                            </p>
-                        </div>
-                        <figure class="col-12 col-sm-6">
-                            <img class="" src="images/meeting01.jpg" alt="">
-                        </figure>
-                    </div> 
-
-                    <div class="row bg-opacity-50 text-shadow align-items-center mb-4">
-                        <div class="col-12 col-sm-6 py-5 py-sm-3">
-                            <h3 class=" text-center mb-md-3">Why have a meeting?</h3>
-                            <p>確かに、私たちは取るに取らない存在です。そればかりか、存在ですらありません。</p>
-                            <p>そのような私たちにとって仕事をすることは困難を極めます。だからこそ、私たちは仕事をしようと努めるのです。</p>
-                            </p>
-                        </div>
-                        <figure class="col-12 col-sm-6">
-                            <img class="" src="images/meeting04.png" alt="">
-                        </figure>
-                    </div>
-                </article>
+    <div class="work" id="work">
+        <div class="work-fixed-height">
+            <div class="work-fixed">
+                
+                <figure class="work-bg-img">
+                    <img src="images/meeting03.png" alt="">
+                </figure>
             </div>
+        </div>
+        <div class="container mw-100">
+            <article class="work-article">
+                <div class="row bg-opacity-50 text-shadow align-items-center flex-row-reverse">
+                    <div class="col-12 col-sm-6 py-5 py-sm-3">
+                        <h3 class="text-center mb-md-3">Continue. It's a continuation.</h3>
+                        <p>私たちは日々会議を続けています。会議のための会議もしょっちゅうです。しかし私たちは会議をします。</p>
+                        <p>なぜなら、私たちには夢があるからです。それは、いつの日か仕事をすることです。
+                        </p>
+                    </div>
+                    <figure class="col-12 col-sm-6">
+                        <img class="" src="images/meeting01.jpg" alt="">
+                    </figure>
+                </div> 
 
+                <div class="row bg-opacity-50 text-shadow align-items-center mb-4">
+                    <div class="col-12 col-sm-6 py-5 py-sm-3">
+                        <h3 class=" text-center mb-md-3">Why have a meeting?</h3>
+                        <p>確かに、私たちは取るに取らない存在です。そればかりか、存在ですらありません。</p>
+                        <p>そのような私たちにとって仕事をすることは困難を極めます。だからこそ、私たちは仕事をしようと努めるのです。</p>
+                        </p>
+                    </div>
+                    <figure class="col-12 col-sm-6">
+                        <img class="" src="images/meeting04.png" alt="">
+                    </figure>
+                </div>
+            </article>
+        </div>
 
-</section>
+    </div><!-- work -->
+        
+        
 
-    <section class="advantage bg-base" id="advantage">
-      <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">ADVANTAGE</h2>
+    <div class="advantage bg-base" id="advantage">
+    <h2 class="d-block m-auto w-50 text-center my-5 bg-danger">ADVANTAGE</h2>
         <div class="container mw-100 p-0">
-          <article class=" bg-main bg-opacity text-shadow article-advantage">
+        <article class=" bg-main bg-opacity text-shadow article-advantage">
             <figure class="float-sm-start w-sm-50 w-md-40 w-lg-30 pe-sm-3"><img src="images/graph.jpg" alt="生産性を示しているかのようなグラフ"></figure>
 
             <div class="figure-side-text">
-              <p>我が社は生産性を気にする必要がありません。そんな企業あるわけないとお思いでしょうか? その通りです。我々は存在しません。
-                  それ故に、私たちは他の企業と比べて消費しません。だから生産性など必要ないのです。</p>
-              <p>そもそも、なぜ生産性が重要視されるのでしょう?</p>
-              <p>我々が思うに、人は生きるために生産しています。生きるために生み出し、消費し、また生み出します。
-              そのための時間は資源であり、また有限です。
-              限られた時間の中で、より良く生きるためには、人は生産性について考えざるを得ません。
-              そのため人は無駄な会議を憎むのでしょう。
-              </p>
+            <p>我が社は生産性を気にする必要がありません。そんな企業あるわけないとお思いでしょうか? その通りです。我々は存在しません。
+                それ故に、私たちは他の企業と比べて消費しません。だから生産性など必要ないのです。</p>
+            <p>そもそも、なぜ生産性が重要視されるのでしょう?</p>
+            <p>我々が思うに、人は生きるために生産しています。生きるために生み出し、消費し、また生み出します。
+            そのための時間は資源であり、また有限です。
+            限られた時間の中で、より良く生きるためには、人は生産性について考えざるを得ません。
+            そのため人は無駄な会議を憎むのでしょう。
+            </p>
             <div class="clear-both-sm">
-              <p>生きることとは何かを使うことです。食料であったり、衣類であったり様々でしょうが、
-                  いずれにせよ、人々は存在し続けるために多くの代償を支払います。</p>
-              <p>我々にそれは必要ありません。なぜなら我々は存在していないからです。厳密に言えば多少は消費している思われますが、人間と比べれば微々たるものです。</p>
+            <p>生きることとは何かを使うことです。食料であったり、衣類であったり様々でしょうが、
+                いずれにせよ、人々は存在し続けるために多くの代償を支払います。</p>
+            <p>我々にそれは必要ありません。なぜなら我々は存在していないからです。厳密に言えば多少は消費している思われますが、人間と比べれば微々たるものです。</p>
             </div>
             <div class="clear-both-md">
-              <p>このサイトで使われている画像はすべてAIにより生成されたものです。それらを使ってインターネットの片隅で、
-                  なんらかの企業のような雰囲気を演出しているにすぎないのです。
-              </p>
+            <p>このサイトで使われている画像はすべてAIにより生成されたものです。それらを使ってインターネットの片隅で、
+                なんらかの企業のような雰囲気を演出しているにすぎないのです。
+            </p>
             </div>
             <div class="clear-both-lg"></div>
             </div>
 
-          </article>
+        </article>
         </div>
-    </section>
-
+    </div><!-- advantage -->
+</section>
     <section class="staff bg-base" id="staff">
         <h2 class="d-block m-auto my-5 w-50 text-center bg-danger">STAFF</h2>
         <!-- スライダー-->
@@ -182,17 +195,23 @@
 <script>
 
     jQuery(function($){
-        /** 背景画像のために、workのheightをwork-articleに合わせる */
-        function setWorkHeight(){
-            let rem = 16;
-            let articleHeight = $('.work-article').height();
-            $(".work").css("height", articleHeight + 5*rem);
-        }
-        setWorkHeight();
+        const fixedHeight = $('nav').height();
+        var scroll;
 
-        $(window).resize(function(){
-        setWorkHeight();
-      });
+        var objTop = $('.work-fixed').offset().top;
+        $(window).on('scroll', function(){
+            scroll = $(window).scrollTop();
+        if(scroll >= objTop - fixedHeight){
+            console.log(scroll);
+            if(!$('.work-fixed').hasClass('active')){
+                $('.work-fixed').addClass('active')
+            }
+        } else {
+            if($('.work-fixed').addClass('active')){
+                $('.work-fixed').removeClass('active')
+            }
+        }
+        });
     });
 
 
