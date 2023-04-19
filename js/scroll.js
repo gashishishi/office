@@ -14,6 +14,10 @@ jQuery(function($){
         let heroTop = $('#hero').offset().top - navHeight;
         $('html').animate({scrollTop:heroTop},{ duration: 1, easing: 'linear' });
     });
+    $('.title-logo').on('click',function(){
+        let heroTop = $('#hero').offset().top - navHeight;
+        $('html').animate({scrollTop:heroTop},{ duration: 1, easing: 'linear' });
+    });
 
     $('#scroll-work').on('click',function(){
         let workTop = $('#work-title').offset().top - navHeight;
