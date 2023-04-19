@@ -202,36 +202,26 @@
     jQuery(function($){
         const fixedHeight = $('nav').height();
         var scroll;
+
         var workImgTop = $('.work-fixed').offset().top;
         var workBottom = $('.work').offset().top + $('.work').outerHeight();;
         $(window).on('scroll', function(){
             scroll = $(window).scrollTop();
         // work-fixedがnavの位置まで来たら固定する
-        const heroImg = $('.hero-bg-img');
-        const workImg = $('.work-bg-img');
-        const workFixed = $('.work-fixed');
-        //初期状態
-        if(scroll === 0){
-            if(workFixed.addClass('active')){
-                workFixed.removeClass('active');
-            }
-            if (heroImg.hasClass('d-none')){
-                heroImg.removeClass('d-none');
-            }
-        } else if(scroll >= workImgTop - fixedHeight){
+        if(scroll >= workImgTop - fixedHeight){
             console.log(scroll);
-            if(!workFixed.hasClass('active')){
-                workFixed.addClass('active');
+            if(!$('.work-fixed').hasClass('active')){
+                $('.work-fixed').addClass('active')
             }
-            
         } else {
-            if(workFixed.addClass('active')){
-                workFixed.removeClass('active');
+            if($('.work-fixed').addClass('active')){
+                $('.work-fixed').removeClass('active')
             }
         }
 
         // workを通り過ぎたら hero-bg-img,work-bg-imgをd-noneにする。
-
+        const heroImg = $('.hero-bg-img');
+        const workImg = $('.work-bg-img');
         if(scroll >= workBottom){
             if (!heroImg.hasClass('d-none'))
                 heroImg.addClass('d-none');
